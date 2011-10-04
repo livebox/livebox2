@@ -1,0 +1,31 @@
+Contenu de la version : FAST3XXX_6813E4
+
+---------------------------------------------------------------------------------------------
+Nom du paquet							somme de control md5				Licence
+---------------------------------------------------------------------------------------------
+bluez-2.13								5d1fc8d6fabbfab1a073cb0c0ee10d59	GPLv2
+busybox-1.01							49770ea56ec4d7f4b0c11b0354af0c76	GPL_V2
+e2fsprogs-1.38							b7ecc4b6b3311fb29793a7f61e316ddf	GPL_V2 BSD EXCEPT
+iproute2-2.6.15-060110					492a9f43ce13aa910a3ff4352517c634	GPL_V2
+linux-2.6.15							071169d6fc193d6227da60c6fde84937	GPL
+net-tools-1.60							1d6669459a479fe9fd09f72202905eb3	GPLv2
+openssl-0.9.8e							3df7973192cb32a2253908960de768a0	SPECIFIC
+rp-l2tp-0.4								cef06e99fc179392e686393b2582ee78	GPL_V2
+samba-2.2.12							b04e79c60b4945b9196748eca4de0741	GPL_V2
+toolchain-mips-linux-uclibc-prebuilt	8a62f9e4451c20f905cf69383c025c92	
+toolchain-mips-linux-uclibc				672cb9b45a54e38d6394f3adb9459a56	GPL_V2 LGPL_V2.1
+wireless_tools-28						4f3b248f3acc205c63c5e8fb1beae93f	GPL_V2
+---------------------------------------------------------------------------------------------
+
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/bluez-2.13.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/busybox-1.01.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/e2fsprogs-1.38.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/iproute2-2.6.15-060110.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/linux-2.6.15.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/net-tools-1.60.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/openssl-0.9.8e.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/rp-l2tp-0.4.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/samba-2.2.12.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/toolchain-mips-linux-uclibc-prebuilt.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/toolchain-mips-linux-uclibc.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E4/wireless_tools-28.tar.bz2

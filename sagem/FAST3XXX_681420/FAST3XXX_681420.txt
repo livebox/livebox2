@@ -1,0 +1,21 @@
+Contenu de la version : FAST3XXX_681420
+
+---------------------------------------------------------------------------------------------
+Nom du paquet							somme de control md5				Licence
+---------------------------------------------------------------------------------------------
+bluez-2.13								5d1fc8d6fabbfab1a073cb0c0ee10d59	GPLv2
+busybox-1.01							49770ea56ec4d7f4b0c11b0354af0c76	GPL_V2
+e2fsprogs-1.38							d123f7e35a3e4167e6e03fc022479522	GPL_V2 BSD EXCEPT
+net-tools-1.60							1d6669459a479fe9fd09f72202905eb3	GPLv2
+rp-l2tp-0.4								000be7356a6ee0d9a5f8c4b272a37ab7	GPL_V2
+samba-2.2.12							1888ed2bdf4b8fcfe5f500eb4d4a258d	GPL_V2
+wireless_tools-28						c60f607c989e43b16df00f54b9c0a2d0	GPL_V2
+---------------------------------------------------------------------------------------------
+
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/bluez-2.13.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/busybox-1.01.tar.bz2 
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/e2fsprogs-1.38.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/net-tools-1.60.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/rp-l2tp-0.4.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/samba-2.2.12.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_681420/wireless_tools-28.tar.bz2

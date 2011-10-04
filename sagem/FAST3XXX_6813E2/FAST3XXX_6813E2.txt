@@ -1,0 +1,35 @@
+Contenu de la version : FAST3XXX_6813E2
+
+---------------------------------------------------------------------------------------------
+Nom du paquet							somme de control md5				Licence
+---------------------------------------------------------------------------------------------
+bluez-2.13								5d1fc8d6fabbfab1a073cb0c0ee10d59	GPLv2
+busybox-1.01							49770ea56ec4d7f4b0c11b0354af0c76	GPL_V2
+e2fsprogs-1.38							a50b24ea9e6cf8262659ae2be62a1cfe	GPL_V2 BSD EXCEPT
+iproute2-2.6.15-060110					6c99a4d92ab99a2ff085df87bfd31988	GPL_V2
+linux-2.6.15							f06cec9d5a8dcae3a9b57769cdf111ed	GPL
+linux-clip_mod-2.6.15					914adbf427391f6e63a94fd565eac965	GPL
+linux-cy7c67200_300-2.6.15				fb7c2689d612ea96a7e76a13cbbf995e	GPL
+net-tools-1.60							1d6669459a479fe9fd09f72202905eb3	GPLv2
+openssl-0.9.8e							3d4bd66ff99a6dee43396a52206870d9	SPECIFIC
+rp-l2tp-0.4								74bee2a741829a19b719098008e84bc3	GPL_V2
+samba-2.2.12							f0454130624ec69ba375b2b269f5f5f4	GPL_V2
+toolchain-mips-linux-uclibc-prebuilt	1ca85d7cda1d355d78b5dfa27d09644d
+toolchain-mips-linux-uclibc				e01742454ac503e2cd676c7b04340d99	GPL_V2 LGPL_V2.1
+wireless_tools-28						7209aa107d6f34e7eee533e28dc82d39	GPL_V2
+---------------------------------------------------------------------------------------------
+
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/bluez-2.13.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/busybox-1.01.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/e2fsprogs-1.38.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/iproute2-2.6.15-060110.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/linux-2.6.15.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/linux-clip_mod-2.6.15.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/linux-cy7c67200_300-2.6.15.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/net-tools-1.60.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/openssl-0.9.8e.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/rp-l2tp-0.4.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/samba-2.2.12.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/toolchain-mips-linux-uclibc-prebuilt.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/toolchain-mips-linux-uclibc.tar.bz2
+http://www.livebox-opensource.com/Products/LiveBox/LiveBox2/Sagem/vFAST3XXX_6813E2/wireless_tools-28.tar.bz2
