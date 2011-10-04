@@ -1,0 +1,112 @@
+# @configure_input@
+#***********************************************************************
+#
+# Makefile
+#
+# Makefile for L2TP code.
+#
+# Copyright (C) 2002 Roaring Penguin Software Inc.
+#
+# This software may be distributed under the terms of the GNU General
+# Public License, Version 2, or (at your option) any later version.
+#
+# LIC: GPL
+#
+# $Id: Makefile.in,v 1.4 2004/05/16 04:12:48 dskoll Exp $
+#***********************************************************************
+
+VERSION=0.4
+
+DEFINES=
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+mandir=@mandir@
+docdir=@prefix@/doc/l2tp-$(VERSION)
+install=@INSTALL@
+install_dir=@INSTALL@ -d
+sbindir=@sbindir@
+
+export AR=mips-linux-uclibc-ar
+
+OBJS=auth.o debug.o dgram.o main.o md5.o network.o options.o peer.o session.o tunnel.o utils.o rg.o
+OPENRG_GPL_OBJS=openrg_gpl.o ipc.o bio_socket.o rg_memory.o alloc.o
+
+SRCS=$(OBJS:.o=.c)
+OPENRG_GPL_SRCS=$(OPENRG_GPL_OBJS:.o=.c)
+
+CFLAGS=-Ilibevent -Wstrict-prototypes --no-strict-aliasing -D_LIBC_REENTRANT -g -Wall -Os  -meb  -msoft-float  -mabi=32  -march=lx4189  -Wa,-32  -Wa,-march=lx4189  -Wa,-mips1  -D__TARGET__ -DVERSION=\"$(VERSION)\" 
+
+all: l2tpd
+
+l2tpd: $(OBJS) libevent/libevent.a libopenrg_gpl.so
+	@CC@ $(OBJS) -meb -L. -Llibevent -levent -lutil -lopenrg_gpl -o $@
+
+libevent/libevent.a:
+	$(MAKE) -C libevent CFLAGS="$(CFLAGS)"
+
+libopenrg_gpl.so: $(OPENRG_GPL_OBJS) libulibc_syslog.a
+	@CC@ -nostdlib $(TOOLCHAIN_DIR)/mips-linux-uclibc/lib/crti.o $(TOOLCHAIN_DIR)/lib/gcc/mips-linux-uclibc/3.4.3/crtbegin.o -shared -o $@ -fpic $(OPENRG_GPL_OBJS) -L. -lulibc_syslog -Wl,--no-whole-archive -lgcc -lc -lgcc $(TOOLCHAIN_DIR)/lib/gcc/mips-linux-uclibc/3.4.3/crtend.o $(TOOLCHAIN_DIR)/mips-linux-uclibc/lib/crtn.o
+
+libulibc_syslog.a: ulibc_syslog.o
+	$(AR)    cruv $@ $^
+	@RANLIB@      $@
+
+ulibc_syslog.o: ulibc_syslog.c
+	@CC@ -c -o $@ $(CFLAGS) $<
+
+openrg_gpl.o: openrg_gpl.c
+	@CC@ -c -o $@ -fpic $(CFLAGS) $<
+ipc.o: ipc.c
+	@CC@ -c -o $@ -fpic $(CFLAGS) $<
+bio_socket.o: bio_socket.c
+	@CC@ -c -o $@ -fpic $(CFLAGS) $<
+rg_memory.o: rg_memory.c
+	@CC@ -c -o $@ -fpic $(CFLAGS) $<
+alloc.o: alloc.c
+	@CC@ -c -o $@ -fpic $(CFLAGS) $<
+
+%.o: %.c
+	@CC@ -c -o $@ $(CFLAGS) $<
+
+depend: .depend
+
+.depend: $(SRCS) $(OPENRG_GPL_SRCS)
+	@CC@ -M $(CFLAGS) $^ > .depend
+
+# Release requires GNU tar!!
+release: FORCE
+	rm -f rp-l2tp-$(VERSION).tar.gz
+	make -C libevent/Doc
+	./make-release.sh $(VERSION)
+	tar cvhf rp-l2tp-$(VERSION).tar rp-l2tp-$(VERSION)
+	gzip -v -9 rp-l2tp-$(VERSION).tar
+
+clean:
+	rm -f *.o *.a *.so *~
+	rm -f l2tpd
+	$(MAKE) -C libevent clean
+	$(MAKE) -C handlers clean
+
+distclean: clean
+	rm -f Makefile config.cache
+	$(MAKE) -C handlers distclean
+
+-include .depend
+
+install: all
+	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
+	$(install) -m 755  l2tpd  $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
+	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp
+	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp/l2tp.conf.example
+	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
+	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
+	$(install) -m 644 man/l2tpd.8 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
+	$(install) -m 644 man/l2tp.conf.5 $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man5
+
+	$(MAKE) -C handlers install
+
+FORCE:
+
+.PHONY: handlers
+
+.PHONY: FORCE

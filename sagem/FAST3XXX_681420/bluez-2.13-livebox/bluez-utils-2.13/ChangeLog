@@ -1,0 +1,227 @@
+ver 2.13:
+	Use file permission 0600 for the link key file.
+	Add support for HID attribute descriptions.
+	Add support for Device ID attributes.
+	Various whitespace cleanups.
+
+	Note:
+	This version needs at least bluez-libs-2.13
+
+ver 2.12:
+	Inherit the device specific options from the default.
+	Use --device for selecting the source device.
+	Add --nosdp option for devices with resource limitation.
+	Add support and parameter option for secure mode.
+	Add a lot of build ids and hardware revisions.
+	Update UUID translation tables.
+
+	Note:
+	This version needs at least bluez-libs-2.12
+
+ver 2.11:
+	Various cleanups to avoid inclusion of kernel headers.
+	Fix output when the CUPS backend is called without arguments.
+	Fix problems with a 64 bit userland.
+	Use Bluetooth library functions if available.
+	Use standard numbering scheme of SDP record handles.
+	Add a master option to the hidd.
+	Add support for changing the link key of a connection.
+	Add support for requesting encryption on keyboards.
+	Add support for revision information of Digianswer devices.
+	Add support for the Zoom, IBM and TDK PCMCIA cards.
+	Add checks for the OpenOBEX and the ALSA libraries.
+	Add experimental mRouter support.
+
+	Note:
+	This version needs at least bluez-libs-2.11
+
+ver 2.10:
+	Use a define for the configuration directory.
+	Fix string initialization for flags translation.
+	Check for usb_get_busses() and usb_interrupt_read().
+	Add optional support for compiling with PIE.
+	Make installation of the init scripts optional.
+	Make compiling with debug information optional.
+	Don't override CFLAGS from configure.
+
+	Note:
+	This version needs at least bluez-libs-2.10
+
+ver 2.9:
+	Retry SDP connect if busy in the CUPS backend.
+	Use packet type and allow role switch in hcitool.
+	Use the functions from the USB library for hid2hci.
+	Add Broadcom firmware loader.
+	Add EPoX endian quirk for buggy keyboards.
+	Update the autoconf/automake scripts.
+
+	Note:
+	This version needs at least bluez-libs-2.9
+
+ver 2.8:
+	Use LIBS and LDADD instead of LDFLAGS.
+	Use HIDP subclass field for HID boot protocol.
+	Set olen before calling getsockopt() in pand.
+	Restore signals for dev-up script.
+	Add PID file support for pand.
+	Add size parameter to expand_name() in hcid.
+	Add support for audio source and audio sink SDP records.
+	Add support for HID virtual cable unplug.
+	Add support for AmbiCom BT2000C card.
+
+	Note:
+	This version needs at least bluez-libs-2.8
+
+ver 2.7:
+	Add support for getting the AFH channel map.
+	Add support for AFH mode.
+	Add support for inquiry mode.
+	Add Bluetooth backend for CUPS.
+	Add the hid2hci utility.
+	Add the hidd utility.
+	Add the pand utility.
+	Add the dund utility.
+	More endian bug fixes.
+	Give udev some time to create the RFCOMM device nodes.
+	Release the TTY if no device node is found.
+	New startup script for the Bluetooth subsystem.
+	Update to the autoconf stuff.
+
+	Note:
+	This version needs at least bluez-libs-2.7
+
+ver 2.6:
+	Change default prefix to /usr.
+	Add manpages for hcid and hcid.conf.
+	Add the sdpd server daemon.
+	Add the sdptool utility.
+	Add the ciptool utility.
+
+	Note:
+	This version needs at least bluez-libs-2.6
+
+ver 2.5:
+	hcitool changes:
+		Support for requesting authentication.
+		Support for setting connection encryption.
+		Fix some endian problems.
+	hciconfig changes:
+		Show revision information for Broadcom devices.
+		Replace unprintable characters in device name.
+	hcid changes:
+		Add D-Bus support for PIN request.
+		Report an error on PIN helper failure.
+		Fix some 64-bit problems.
+	Update bluepin script for GTK2.
+
+ver 2.4:
+	hcitool changes:
+		Increase number of inquiry responses.
+		Support for transmit power level.
+		Minor updates.
+	hciconfig changes:
+		Display all 8 bytes of the features.
+		Add support for reading and writing of IAC.
+		Correct decoding class of device.
+		Use Ericsson revision command for ST Microelectronics devices.
+		Display AVM firmware version with 'revision' command.
+		New code for CSR specific revision information.
+	hciattach changes:
+		Support for ST Microelectronics specific initialization.
+		Support for 3Com card version 3.0.
+		Support for TDK, IBM and Socket cards.
+		Support for initial baud rate.
+	Update man pages.
+	Fixes for some memory leaks.
+
+ver 2.3:
+	hciconfig changes:
+		CSR firmware version is now displayed by 'revision' command.
+		Voice command is working properly on big endian machines.
+	hciattach changes:
+		Added support for Texas Bluetooth modules.
+		Added support for high UART baud rates on Ericsson modules.
+		BCSP initialization fixes.
+	Support for role switch command (hcitool).
+	RFCOMM config file parser fixes.
+	Update man pages.
+	Removed GLib dependency.
+
+ver 2.2:
+	Support for voice settings (hciconfig).
+	Minor hcitool fixes.
+	Improved configure script.
+	Added Headset testing tool.
+	Updated man pages.
+	RPM package.
+
+ver 2.1:
+	Improved BCSP initialization (hciattach).
+	Support for displaying link quality (hcitool).
+	Support for changing link supervision timeout (hcitool).
+	New RFCOMM TTY configuration tool (rfcomm).
+	Minor fixes and updates.
+
+ver 2.0:
+	BCSP initialization (hciattach).
+	Minor hciconfig fixes.	
+
+ver 2.0-pr13:
+	Support for multiple pairing modes.
+	Link key database handling fixes.
+
+ver 2.0-pre12:
+	Removed max link key limit. Keys never expire.
+	Link key database is always updated. Reread PIN on SIGHUP (hcid).
+	Bluetooth script starts SDPd, if installed.
+	Other minor fixes.
+
+ver 2.0-pre11:
+	Improved link key management and more verbose logging (hcid).
+	Fixed scan command (hcitool).
+
+ver 2.0-pre10:
+	Support for reading RSSI, remote name and changing
+	connection type (hcitool). 
+	Device initialization fixes (hcid).
+	Other minor fixes and improvements.
+	Build environment cleanup and fixes.
+
+ver 2.0-pre9:
+	Improved bluepin. Working X authentication.
+	Improved hcitool. New flexible cmd syntax, additional commands.
+	Human readable display of the device features.
+
+ver 2.0-pre8:
+	Additional hciconfig commands. Support for ACL and SCO MTU ioctls.
+	Support for Inventel and COM1 UART based devices.
+	Minor hcitool fixes.
+	Improved l2test. New L2CAP test modes.
+	Minor cleanup.
+
+ver 2.0-pre7:
+	Bluetooth utilities is now a separate package.
+	New build environment uses automake.
+	Moved all config files and security data to /etc/bluetooth.
+	Various cleanups.
+
+	Note:
+	Please move your /etc/hcid.conf to /etc/bluetooth
+
+ver 2.0-pre6:
+	Improved hcitool.
+	l2test minor output fixes.
+	hciattach opt to display list of supported devices.
+
+ver 2.0-pre2:
+	Additional HCI library functions.
+	Improved CSR baud rate initialization.
+	PCMCIA scripts fixes and enhancements.
+	Documentation update.
+	
+ver 2.0-pre1:
+	New UART initialization utility.
+	Hot plugging support for UART based PCMCIA devices.
+	SCO testing utility.
+	New authentication utility (bluepin).
+	Minor fixes and improvements.

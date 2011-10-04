@@ -1,0 +1,2 @@
+basic_machine=mips
+os=-linux-uclibc
